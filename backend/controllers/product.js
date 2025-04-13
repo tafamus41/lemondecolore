@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Product from "../models/product.js";
+import Product from "../models/product.model.js";
 
 export const getProducts = async (req, res) => {
 	try {
@@ -28,7 +28,6 @@ export const createProduct = async (req, res) => {
 		res.status(500).json({ success: false, message: "Server Error" });
 	}
 };
-
 
 export const updateProduct = async (req, res) => {
 	const { id } = req.params;
